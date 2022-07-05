@@ -6,7 +6,34 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:8080/api/usuarios/20",
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\" : \"Santiago\",\n    \"edad\": 35\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/usuarios",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT",
 			"request": {
 				"method": "PUT",
 				"header": [],
@@ -20,12 +47,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/usuarios/20",
-					"protocol": "http",
+					"raw": "{{url}}/api/usuarios/20",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"usuarios",
@@ -36,7 +61,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/usuarios/20 Copy",
+			"name": "GET",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -53,12 +78,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/usuarios?q=123",
-					"protocol": "http",
+					"raw": "{{url}}/api/usuarios?q=123",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"usuarios"
