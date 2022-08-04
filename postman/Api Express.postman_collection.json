@@ -12,7 +12,34 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"nombre\" : \"Santiago\",\n    \"edad\": 35\n}",
+					"raw": "{\n    \"nombre\" : \"Test15\",\n    \"google\" : true,\n    \"correo\":\"mail15@test.com\",\n    \"password\":\"123436\",\n    \"rol\":\"USER_ROLE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/usuarios",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\" : \"Test1\",\n    \"google\" : true,\n    \"correo\":\"mail@test.com\",\n    \"password\":\"123436\",\n    \"rol\":\"USER_ROLE\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -39,7 +66,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"nombre\" : \"Santiago\",\n    \"edad\": 35\n}",
+					"raw": "{\n    \"nombre\" : \"Santiago3\",\n    \"edad\": 35,\n    \"google\":true,\n    \"rol\": \"ADMIN_ROLE\",\n    \"correo\" : \"abc@gmail.com\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -47,14 +74,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/api/usuarios/20",
+					"raw": "{{url}}/api/usuarios/62e23fcf6ed88644e0eb0a27",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"api",
 						"usuarios",
-						"20"
+						"62e23fcf6ed88644e0eb0a27"
 					]
 				}
 			},
@@ -78,7 +105,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/api/usuarios?q=123",
+					"raw": "{{url}}/api/usuarios?limite=10",
 					"host": [
 						"{{url}}"
 					],
@@ -88,9 +115,33 @@
 					],
 					"query": [
 						{
-							"key": "q",
-							"value": "123"
+							"key": "limite",
+							"value": "10"
+						},
+						{
+							"key": "desde",
+							"value": "5",
+							"disabled": true
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/usuarios/62eb92a3f3282f5be89e8a50",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"usuarios",
+						"62eb92a3f3282f5be89e8a50"
 					]
 				}
 			},
